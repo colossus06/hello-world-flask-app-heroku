@@ -19,7 +19,10 @@ def index():
 def greet():
     k=request.form['fn']
     l=request.form['ln']
-    flash(f"Hello {k} {l} great to see you!")    
+    kn= k.capitalize()
+    nl=l.capitalize()
+
+    flash(f"Hello {kn} {nl}! \nGreat to see you!")    
     return render_template("index.html") 
 
 
