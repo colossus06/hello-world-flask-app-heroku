@@ -17,14 +17,14 @@ def index():
 
 @app.route("/greet", methods=["POST", "GET"])
 def greet():
-    k=request.form['fn']
-    l=request.form['ln']
-    kn= k.capitalize()
-    nl=l.capitalize()
+    k = request.form['fn']
+    l = request.form['ln']
+    kn = k.capitalize()
+    nl = l.capitalize()
 
-    flash(f"Hello {kn} {nl}! \nGreat to see you!")    
-    return render_template("index.html") 
+    flash(f"Hello {kn} {nl}! \nGreat to see you!")
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
-    app.run(debug=True) 
+    app.run(debug=True)
